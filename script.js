@@ -1,12 +1,19 @@
-function validateForm() {
-    const emailField = document.getElementById('email');
-    const email = emailField.value;
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (!emailPattern.test(email)) {
-        alert('Please enter a valid email address.');
-        return false;
-    }
-    alert('Form submitted successfully!');
-    return true;
-}
+document.addEventListener('DOMContentLoaded', function() {
+    
+    const app = document.getElementById('app');
+    const container = document.createElement('div');
+    container.className = 'w3-row-padding';
+    
+    const leftColumn = document.createElement('div');
+    leftColumn.className = 'w3-third';
+    
+   
+    
+    const rightColumn = document.createElement('div');
+    rightColumn.className = 'w3-twothird';
+    
+   
+    container.appendChild(leftColumn);
+    container.appendChild(rightColumn);
+    app.appendChild(container);
+  });
